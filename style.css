@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+    color: gray;
+    text-shadow: 1px 1px 1px blue;
+    font-family: 'Black And White Picture', sans-serif;
+    letter-spacing: 2px;
+    font-size: 48px;
+}
+button{
+    margin: 2px;
+    font-family: 'Carter One', cursive;
+    font-weight: bold;
+    font-size: 22px;
+    color: skyblue;
+    background: gray;
+}
+button:hover{
+background-color: lightslategray;
+}
+form{
+    margin: 3px;
+  color: dimgrey;
+  font-family: 'Carter One', cursive;
+  font-size: 22px;
+  text-shadow: 1px 1px 1px lightskyblue;
+ 
+}
+#add-giphy{
+ color: grey;
+    background: lightblue;
+}

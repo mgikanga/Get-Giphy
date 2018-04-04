@@ -44,16 +44,16 @@ $(document).ready(function () {
                     //div to hold the images
                     var contentArea = $("<div>");
                     // image element declaration
-        
+        var imageContainer = $("<div>");
+        imageContainer.attr('class', 'col-md-4');
+        contentArea.append(imageContainer);
                     var pickStill = $("<img>");
-                   
-                 
-                   
+                    
                     //link for data-animate image 
                     pickStill.attr('data-animate', results[i].images.fixed_height.url);
                     pickStill.addClass('gif');
                     pickStill.attr('data-state', 'still');
-
+                    pickStill.attr({ width: '300px', height: '220px' });
                     //link for data-still image
                     pickStill.attr('data-still', results[i].images.fixed_height_still.url);
                     var rate = $("<p>");
@@ -63,8 +63,8 @@ $(document).ready(function () {
                     //link for animated image
                     
                     rate.attr(results[i].rating);
-                    contentArea.append(pickStill);
-                    contentArea.append(rate);
+                    imageContainer.append(pickStill);
+                    imageContainer.append(rate);
                     //append image to the page
                     $("#content-area").prepend(contentArea);
                 }
@@ -108,5 +108,6 @@ $(document).ready(function () {
     });
 
     displayButtons();
+
 
 });
