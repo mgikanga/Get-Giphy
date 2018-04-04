@@ -44,14 +44,14 @@ $(document).ready(function () {
                     //div to hold the images
                     var contentArea = $("<div>");
                     // image element declaration
-                    var pickAnime = $("<img>");
+        
                     var pickStill = $("<img>");
-                    pickAnime.addClass('class', 'gif');
-                    pickAnime.attr('data-state', 'animate');
-
+                   
+                 
+                   
                     //link for data-animate image 
-                    pickAnime.attr('data-animate', results[i].images.fixed_height_small.url);
-                    pickStill.addClass('class', 'gif');
+                    pickStill.attr('data-animate', results[i].images.fixed_height.url);
+                    pickStill.addClass('gif');
                     pickStill.attr('data-state', 'still');
 
                     //link for data-still image
@@ -61,7 +61,7 @@ $(document).ready(function () {
                     //link for still image
                     pickStill.attr('src', results[i].images.fixed_height_still.url);
                     //link for animated image
-                    pickAnime.attr('src', results[i].images.fixed_height_small.url);
+                    
                     rate.attr(results[i].rating);
                     contentArea.append(pickStill);
                     contentArea.append(rate);
@@ -69,11 +69,26 @@ $(document).ready(function () {
                     $("#content-area").prepend(contentArea);
                 }
 
-    console.log('im here');
+    
+            })
+
+            .then(function () {
+                console.log('im here');
     $(".gif").on('click', function () {
         console.log("heck");
+        var state = $(this).attr("data-state");
+        if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            console.log(this);
+            $(this).attr("data-state", "animate");
+            console.log(this);
+          } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+          }
     })
-            });
+            })
+
     });
     }
 
