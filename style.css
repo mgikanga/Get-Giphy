@@ -17,7 +17,7 @@ button{
 button:hover{
 background-color: lightslategray;
 }
-form{
+form, label{
     margin: 3px;
   color: dimgrey;
   font-family: 'Carter One', cursive;

@@ -27,8 +27,8 @@
             </div>
         </div>
         <div class="row">
-                <div class="col-md-2" id="content"></div>
-            <div class="col-md-8" id="content">
+              
+            <div class="col-md-6" id="content">
                 <form id="giphy-form">
                         <label for="giphy-input">Add a Giphy of Your choice</label>
                         <input type="text" id="giphy-input"><br>
@@ -37,7 +37,18 @@
                         <input id="add-giphy" type="submit" value="Add Your Gihpy">
                       </form>
         </div>
-        <div class="col-md-2" id="content"></div>
+        <div class="col-md-6" id="content">
+            <!-- capture the number of giphy the use wants to retrieve  -->
+            <div class="form-group">
+                <label for="pwd">Number of Gihpy to Retrieve:</label>
+                <select class="form-control" id="giphy-count">
+                  <option value="5">5</option>
+                  <!-- Setting the option for 5 as default -->
+                  <option value="10" selected>10</option>
+                  <option value="15">15</option>
+                </select>
+              </div>
+        </div>
     </div>
     <div class="row">
             <div class="col-md-12" id="content">
