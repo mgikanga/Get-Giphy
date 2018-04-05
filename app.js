@@ -27,7 +27,7 @@ $(document).ready(function () {
         // Grabbing and storing the data-animal property value from the button
         var search = $(this).attr("data-animal");
         var url = 'https://api.giphy.com/v1/gifs/search?&q=';
-        var apiKey = '&api_key=gvdNGfXK5Y5LmpIOMmB7rInEXLSd33G6&limit=10';
+        var apiKey = '&api_key=gvdNGfXK5Y5LmpIOMmB7rInEXLSd33G6';
         var queryURL = url + search + apiKey;
         var limit = '&limit=10';
         var rating = '&q=&rating=G';
@@ -37,10 +37,13 @@ $(document).ready(function () {
         })
             .then(function (response) {
                 console.log(response);
-                var results = response.data;
+               
                 //for loop to display the images
-                for (i = 0; i < results.length; i++) {
-
+                var numGif = $("#giphy-count").val();
+                console.log(numGif)
+                var results = response.data;
+                for (i = 0; i < numGif; i++) {
+                    var articleCount = i + 1;
                     //div to hold the images
                     var contentArea = $("<div>");
                     // image element declaration
