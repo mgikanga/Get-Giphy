@@ -1,7 +1,10 @@
+body{
+    background-color: whitesmoke;
+}
 h1{
     text-align: center;
-    color: gray;
-    text-shadow: 1px 1px 1px blue;
+    color: lightseagreen;
+    text-shadow: 2px 2px 2px gray;
     font-family: 'Black And White Picture', sans-serif;
     letter-spacing: 2px;
     font-size: 48px;
@@ -13,19 +16,27 @@ button{
     font-size: 22px;
     color: skyblue;
     background: gray;
+    letter-spacing: 1px;
 }
 button:hover{
 background-color: lightslategray;
 }
 form, label{
     margin: 3px;
-  color: dimgrey;
+  color: lightseagreen;
   font-family: 'Carter One', cursive;
   font-size: 22px;
-  text-shadow: 1px 1px 1px lightskyblue;
+  text-shadow: 1px 1px 1px dimgrey;
+  letter-spacing: 1px;
  
 }
 #add-giphy{
  color: grey;
+ margin: 1%;
     background: lightblue;
+}
+.wrap{
+   padding: 1%;
+    background-image: url('images/bk.jpg');
+    margin-bottom: 2%;
 }
