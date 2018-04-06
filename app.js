@@ -82,16 +82,18 @@ $(document).ready(function () {
                         //append image and rating to the page
                         $("#content-area").prepend(contentArea);
 
-                        /* need to work on this for favarites
-                        $(".likeit").on('click', function () {
+                        /* need to work on this for favarites */
+                        likeimg.on('click', function () {
+
                             $(pickStill)
                 .clone()
                 .appendTo("#favs");
+                
                            // $('#favs').clone(pickStill);
                             //$('#favs').append(pickStill);
                             console.log("hi");
 
-                        });*/
+                        });
                     }
 
 
