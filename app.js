@@ -47,17 +47,17 @@ $(document).ready(function () {
                     for (i = 0; i < numGif; i++) {
 
                         //div to hold the images
-                        var contentArea = $("<div>");
+                        let contentArea = $("<div>");
                         // image element declaration
-                        var imageContainer = $("<div>");
+                        let imageContainer = $("<div>");
                         //div container for each image
                         imageContainer.attr('class', 'col-md-4');
                         contentArea.append(imageContainer);
                         //image to append to the web
-                        var pickStill = $("<img>");
-                        var like = $("<div>");
+                        let pickStill = $("<img>");
+                        let like = $("<div>");
                         //image for user to like the image
-                        var likeimg = $("<img>");
+                        let likeimg = $("<img>");
                         likeimg.attr('src', 'images/like.png');
                         likeimg.addClass("likeit");
                         likeimg.attr("gif-index", i)
@@ -70,7 +70,7 @@ $(document).ready(function () {
                         pickStill.attr({ width: '350px', height: '220px' });
                         //set attribute for data-still image
                         pickStill.attr('data-still', results[i].images.fixed_height_still.url);
-                        var rate = $("<p>");
+                        let rate = $("<p>");
                         rate.text("Rating: " + results[i].rating);
                         //link for still image
                         pickStill.attr('src', results[i].images.fixed_height_still.url);
@@ -84,13 +84,18 @@ $(document).ready(function () {
 
                         /* need to work on this for favarites */
                         likeimg.on('click', function () {
-
+                            
                             $(pickStill)
                 .clone()
                 .appendTo("#favs");
+                /*
+                var p = $("<p>");
+                            P.text("YOUR FAVORITE GIPHY");
+                            $("#fav").append(p);
+
                 
                            // $('#favs').clone(pickStill);
-                            //$('#favs').append(pickStill);
+                            //$('#favs').append(pickStill);*/
                             console.log("hi");
 
                         });
